@@ -1,0 +1,21 @@
+# Site settings
+author_name: Leonardo Lima Ribeiro
+title: leonardolr.dev blog
+email: leonardolr.dev@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Somente um blog/página/sei-lá-o-que-mais para compartilhar um pouquinho 
+  do que sei e estou aprendendo em relação a Sistemas, SAP e Web a quem
+  possa se interessar. 
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://leonardolr.github.io" # the base hostname & protocol for your site
+twitter_username: leolrrj
+github_username:  leonardolr
+linkedin_profile_url: br.linkedin.com/pub/leonardo-ribeiro/17/7a0/a6b/
+linkedin_username: leonardo-ribeiro
+
+# Build settings
+markdown: kramdown
+
+highlighter: pygments
+encoding: utf-8
+paginate: 9

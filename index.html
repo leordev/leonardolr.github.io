@@ -1,1 +1,42 @@
-"Ol� mundo!" 
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Postagens</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+		<p>{{ post.excerpt }} </p>
+		<p align="right">>> <a href="{{ post.url | prepend: site.baseurl }}">continuar lendo...</a></p>
+		
+      </li>
+    {% endfor %}
+  </ul>
+  
+<!-- Pagination links
+	<div class="pagination">
+	  {% if paginator.previous_page %}
+		<a href="/page{{ paginator.previous_page }}" class="previous">Anterior</a>
+	  {% else %}
+		<span class="previous">Anterior</span>
+	  {% endif %}
+	  <span class="page_number ">Página: {{ paginator.page }} de {{ paginator.total_pages }}</span>
+	  {% if paginator.next_page %}
+		<a href="/page{{ paginator.next_page }}" class="next">Próxima</a>
+	  {% else %}
+		<span class="next ">Próxima</span>
+	  {% endif %}
+	</div>
+-->
+
+  <p class="rss-subscribe">inscrição <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
