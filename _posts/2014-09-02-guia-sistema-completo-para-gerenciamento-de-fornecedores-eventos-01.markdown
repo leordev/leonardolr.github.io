@@ -9,17 +9,17 @@ tags: web arquitetura ideias guia tutorial
 excerpt: >
   É isso mesmo: estou propondo a vocês criar um sistema comigo, do zero!
 ---
-É isso mesmo: estou propondo a vocês criar um sistema comigo, do zero e terminá-lo sabe-se lá quando (espero
+É isso mesmo: estou propondo a vocês criarem um sistema comigo, do zero e terminá-lo sabe-se lá quando (espero
 que em poucos meses). A ideia disso é tentar cobrir todos os aspectos da criação de software desde a arquitetura 
 do projeto, implementação, desenvolvimento do backend, frontend, testes, deployment, geração de app para mobile, 
 novas iterações de desenvolvimento, melhorias e o que mais for possível. E meu objetivo principal com isso é aprender com
 vocês, através de debates, novas ideias, o que estamos fazendo de errado que poderia melhorar, qual tecnologia nova
 está surgindo enquanto estamos tocando o projeto e por aí vai.
 
-Tá mas o que significa "Gerenciamento de fornecedores/serviços de eventos"? Ainda não pensei em um nome para
+Tá, mas o que significa "Gerenciamento de fornecedores/serviços de eventos"? Ainda não pensei em um nome para
 o site/app e nem me incomodo de alguém "copiar" a ideia e desenvolvê-la mais rápida. Mas seria uma ferramenta
-que auxiliaria as pessoas criarem cotações de festas e, que ao mesmo tempo, para os fornecedores angariar mais clientes,
-controlar seus serviços e anunciar seus produtos. Segue o cenário:
+que auxiliaria as pessoas criarem cotações de festas e, que ao mesmo tempo, para os fornecedores angariarem mais clientes,
+controlarem seus serviços e anunciarem seus produtos. Segue o cenário:
 sou um recém-papai e estive numa batalha sem fim para cotar tudo que vou precisar na festa de 1 ano do meu filho.
 O orçamento como sempre é apertado e queremos o mundo, e por onde começar a pesquisa? Bom, essa peteca ficou
 com a minha esposa. Ela pesquisava diversos sites, buffets, páginas do facebook etc. Não achamos um serviço
