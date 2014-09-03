@@ -66,10 +66,10 @@ a criação desse monstrinho que não é nada pequeno.
 
 Minha ideia inicial para as próximas partes (podemos alterar, reordenar etc.):
 
-* 2. Arquitetura de sistemas e organização do fluxo de trabalho/desenvolvimento
-* 3. Controle de versão com Git - Contribuição via Github
-* 4. Regras do negócio, esboçando o core business e serviços
-* 5. IDE de desenvolvimento, Prototipando & TDD (Test driven development)
+* 2 - Arquitetura de sistemas e organização do fluxo de trabalho/desenvolvimento
+* 3 - Controle de versão com Git - Contribuição via Github
+* 4 - Regras do negócio, esboçando o core business e serviços
+* 5 - IDE de desenvolvimento, Prototipando & TDD (Test driven development)
 
 Não sei quantas partes o guia completo terá e também não vou prometer prazo para finalizar, mas a ideia está lançada! Ainda
 não tive ideias para o nome do sistema, por favor contribuam, mandem sugestões de nomes aqui nos comentários! Aliás vou pedir a
