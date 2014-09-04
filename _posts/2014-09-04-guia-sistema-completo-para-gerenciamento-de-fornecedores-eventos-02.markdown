@@ -25,6 +25,8 @@ Imagine agora que cada funcionalidade da aplicação fosse disponibilizada atrav
 de usuário e uma outra interface para troca de senha. Começamos aqui a falar de arquitetura hexagonal ou arquitetura de portas e adaptadores, onde cada interface representa uma porta/adaptador que se pluga com qualquer dispositivo.
 No nosso exemplo poderíamos registrar o usuário através de um site que se "pluga" ao nosso sistema através do adaptador (API) que estamos disponibilizando. Quem sabe posteriormente o mesmo usuário altera sua senha através do seu celular que também conversa com nossa API.
 
+![Ilustração APIs](https://cloud.githubusercontent.com/assets/5430347/4154198/a9ec05cc-345f-11e4-8252-0a67f651e69a.png) _Na ilustração, a **Aplicação** disponibiliza as API's para o mundo externo, tornando possível o acesso através de **qualquer sistema**. No exemplo, os **sistemas externos** não estão ligados diretamente nas API's, e sim numa "membrana" que as englobam, apenas para demonstrar que esses sistemas podem acessar qualquer uma das API's disponibilizadas._
+
 A ideia aqui é que nossa aplicação tenha o código necessário para atender todas as suas funcionalidades dentro dele mesmo. Essa camada de código é o que chamamos de core, que obrigatoriamente deveria possuir todas as regras de negócio. E não devemos permitir nunca que o código necessário "vaze" para outras camadas ou aplicações. Criamos aqui também o conceito de dentro e fora da aplicação ou _inside/outside application_.
 
 >**A regra que devemos obedecer é que o código interno (inside) não deve nunca sair para a camada externa (outside).**
