@@ -70,6 +70,8 @@ Nesse caso, acredito que o autor esteja se referindo a definição das regras de
 
 Ainda como sugestão de desenvolvimento do padrão de arquitetura hexagonal, temos o seguinte fluxo de desenvolvimento:
 
+![Imagem do fluxo](https://cloud.githubusercontent.com/assets/6147142/4151729/8fcc18f6-3448-11e4-9d14-8e6ef64d16f2.gif)
+
 1. Testar a aplicação via **programa batch de testes unitários** em cima de **dados instanciados durante a execução**.
 2. Testar a aplicação através de **interface gráfica** em cima de **dados instanciados durante a execução**.
 3. Testar a aplicação via **programa batch de testes unitários** em que se comunica com uma **interface que acessa um BD real**.
