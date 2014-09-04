@@ -7,8 +7,9 @@ author: Leonardo Lima Ribeiro
 meta: arquitetura hexagonal apis workflow fluxo backend frontend testes node angular sails hapi sgbd html5 bootstrap ui ux javascript mysql postgres
 tags: arquitetura hexagonal apis workflow fluxo backend frontend testes node angular sails hapi sgbd html5 bootstrap ui ux javascript mysql postgres
 excerpt: >
-Na segunda parte iremos abordar na parte teórica a arquitetura hexagonal e APIs e também a organização do workflow de desenvolvimento. Na parte prática iremos definir qual o stack adotado ao desenvolvimento do sistema. Vamos lá?!
+  Na segunda parte iremos abordar na parte teórica a arquitetura hexagonal e APIs e também a organização do workflow de desenvolvimento. Na parte prática iremos definir qual o stack adotado ao desenvolvimento do sistema. Vamos lá?!
 ---
+
 E lá vamos nós! Pretendo seguir o guia e as matérias da seguinte forma: na primeira parte de cada artigo falaremos sobre os aspectos teóricos, alguns exemplos e pesquisas; e na segunda parte aplicamos o que vimos na primeira parte ao SCG(o nosso famoso sistema completo de gerenciamento).
 
 # Teoria: Arquitetura e workflow de desenvolvimento
