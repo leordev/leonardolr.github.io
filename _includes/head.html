@@ -3,8 +3,15 @@
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>{% if page.title %}{{ site.title }} - {{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="description" content="{{ site.description }}">
+    <title>{% if page.title %}{{ page.title }} &ndash; {% endif %}{{ site.title }} &ndash; Web, sistemas, HTML, Javascript e SAP</title>
+    <meta name="description" content="Sou analista de sistemas, moro em São Paulo, sou consultor SAP e escrevo sobre arquitetura de sistemas, web, HTML, JS, CSS, node.js e angular.js">
+    <meta name="keywords" content="front-end,web,dev,desenvolvimento,nodejs,angularjs,sailsjs,sql,brasil,sp,sao-paulo,blog,writing,ui,ux,iniciantes,html,css,javascript">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@leolrrj">
+    <meta name="twitter:domain" content="http://leonardolr.github.io">
+    <meta name="twitter:title" content="{% if page.title %} {{ page.title }} &ndash; {% endif %} Leonardo Ribeiro &ndash; Web, sistemas, HTML, Javascript e SAP">
+    <meta name="twitter:description" content="{{ page.excerpt | strip_html}} (Read more...)">
 
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
