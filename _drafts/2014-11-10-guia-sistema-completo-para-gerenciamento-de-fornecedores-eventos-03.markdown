@@ -23,14 +23,17 @@ O CVS, ou Concurrent Version System (Sistema de Versões Concorrentes) é um sis
 
 Então seria uma ferramenta que nos permite modificar o código continuamente e termos como verificar o que foi alterado ao longo do tempo, com diversas facilidades no próprio software. Caso contrário, precisaríamos ficar salvando cada versão do código, abrir os códigos fontes e comparar linha a linha para verificar a diferença. É uma facilidade e tanto, ainda mais para quem desenvolve em equipe, uma vez que também sabemos quem é o autor de cada modificação, certo?
 
-
+![Comparação de código no WebStorm com Git](https://cloud.githubusercontent.com/assets/6147142/4980796/2eac56e0-6903-11e4-92b9-0c894ab74301.png)
 
 O exemplo anterior mostra que o bloco em verde foi acrescentado na nova versão de código. Repare que antes o código acabava na linha 53 e, agora na linha 50, foi inserido o atributo vendor. A screen acima foi tirada no WebStorm (IDE de desenvolvimento), utilizando o Git como CVS.
 
-Vamos à prática! (Para isso você só precisará instalar o Git, siga as instruções no site oficial: http://git-scm.com)
+Vamos à prática! (Para isso você só precisará instalar o Git, siga as instruções no site oficial: [http://git-scm.com])
 
 Criemos um repositório chamado FestasJaApp:
+
+{% highlight bash %}
 $ git init FestasJaApp
+{% endhighlight %}
 
 Repositório nada mais é do que uma pasta que irá servir de armazenamento de todo seu projeto. No Git essa pasta é raíz é chamada de repositório.
 
@@ -246,7 +249,7 @@ $ git add new.html
 
 Repare que no sidebar do WebStorm, já me mostra em azul os arquivos modificados, em verde os arquivos novos, cinza os arquivos ignorados pelo .gitignore e vermelho os arquivos que ainda não foram adicionados ao repositório:
 
-
+![Sidebar do Webstorm](https://cloud.githubusercontent.com/assets/6147142/4980794/2ea97a6a-6903-11e4-804d-3e8c1e59e6bb.png)
 
 Adicione todos os arquivos com git add . e depois git commit -am “novas paginas”
 
@@ -254,13 +257,13 @@ Com isso temos todas as novas alterações versionadas no repositório. Lembra q
 
 Conseguimos fazer isso facilmente através do botão direito no webstorm:
 
-
+![Exibir histórico](https://cloud.githubusercontent.com/assets/6147142/4980793/2ea74d44-6903-11e4-9091-99805298272f.png)
 
 Clicando com o botão direito mais uma vez no webstorm na primeira versão do arquivo e comparando com a versão atual:
 
+![Visualizando histórico e comparando versão](https://cloud.githubusercontent.com/assets/6147142/4980795/2eaa6100-6903-11e4-84bd-ea25daab4161.png)
 
-
-
+![Comparando código](https://cloud.githubusercontent.com/assets/6147142/4980797/2eb17102-6903-11e4-9115-7033b1a66fd8.png)
 
 Particularmente eu prefiro trabalhar com um IDE justamente por essas facilidades. Se você preferir visualizar essas diferenças por terminal também é possível através dos comandos git log e git diff!
 
@@ -295,13 +298,13 @@ Date:   Sun Nov 9 13:14:25 2014 -0200
 
 Agora que tal enviarmos nosso repositório para um “servidor” e ter a possibilidade de outros companheiros de projeto atuarem nesse trabalho? Essa é uma das principais vantagens do Git. O Git trata cada repositório como um servidor! Isso te permite ter diversos backups do seu projetos em diversos locais. 
 
-
+![Servidores Git](https://cloud.githubusercontent.com/assets/6147142/4980798/2eb174fe-6903-11e4-8229-3222fdb6cbbb.png)
 
 Bom, a maneira mais fácil de fazer isso é utilizar serviços prontos que tem essa serventia como o GitHub ou o BitBucket. Neste exemplo vamos usar o GitHub e para isso você vai precisar de uma conta lá, senão tiver, crie.
 
 Após criar a conta, no próprio site do GitHub, tem os passos iniciais para criar um novo repositório. Como já temos o repositório criado, vamos apenas enviar para o GitHub, então:
 1 - Crie um novo repositório no site do GitHub, nomeando-o de FestasJaApp, com a opção Inicializar repositório com arquivo Readme desmarcada (já temos um repositório, lembra?):
-
+![Criando novo repositório no GitHub](https://cloud.githubusercontent.com/assets/6147142/4980800/2ecbc2f0-6903-11e4-9838-9d854a9179c0.png)
 
 2 - Na pasta do nosso já criado repositório entre com os comandos abaixo:
 {% highlight bash %}
@@ -322,7 +325,7 @@ Branch master set up to track remote branch master from origin.
 {% endhighlight %}
 
 Ao realizar um refresh do repositório na página, conseguimos verificar os arquivos no repositório do github:
-
+![Repositório com arquivos](https://cloud.githubusercontent.com/assets/6147142/4980799/2ec4f114-6903-11e4-8068-a633b301f845.png)
 
 Com isso seu repositório já está publicado no GitHub, você pode divulgar para seus companheiros de projeto para que eles possam “clonar” o repositório. Clonar nada mais é que fazer o download do repositório através do comando git clone. Vocês já podem fazer o clone do nosso primeiro repositório pelo comando abaixo:
 
@@ -351,13 +354,13 @@ Lembra do artigo anterior onde falamos sobre arquitetura de sistemas hexagonal? 
 Iremos forkar o projeto angular-sailsjs-boilerplate que é constituído de duas partes: Frontend e Backend. No Backend temos o framework sailsjs em cima do Node.Js, ele será responsável pela nossa camada de business logic. Lembra? E no frontend temos um boilerplate baseado em AngularJs, com o Karma para fazermos testes unitários. Com esse setup podemos adicionar novos frontend, seja app nativo para android, app nativo para iOS etc. Basta criarmos novas pastas de frontend que se conectem com nosso backend através de suas APIs (pois é dessa forma que o frontend baseado em AngularJs que já vem no projeto se conecta também). 
 
 Vamos ao fork:
-1 - Acesse o repositório original: https://github.com/tarlepp/angular-sailsjs-boilerplate 
+1 - Acesse o repositório original: [https://github.com/tarlepp/angular-sailsjs-boilerplate]
 2 - Clique no botão Fork, no canto superior direito do site do GitHub
-3 - Aguarde até o término do Fork e clique em Configurações (settings), agora mude o nome do repositório para o que deseja, no meu caso mudei para FestasJa, verifique meu repositório forkado aqui: https://github.com/leonardolr/FestasJa
+3 - Aguarde até o término do Fork e clique em Configurações (settings), agora mude o nome do repositório para o que deseja, no meu caso mudei para FestasJa, verifique meu repositório forkado aqui: [https://github.com/leonardolr/FestasJa]
 
 Pronto, agora já temos nosso boilerplate inicial para começarmos a desenvolver o FestasJa (nome improvisado e bem feio por sinal, mas o melhor que tive até agora)!
 
-Para que você veja as funcionalidades desse boilerplate leia o arquivo Readme.md para fazer as instalações necessárias para levantar este aplicativo, que já vem com uns exemplos legais de navegação em um acervo de livros e chat de mensagens também. A única coisa que você deve instalar antes é o Node.Js que pode ser obtido pelo site http://nodejs.org/. Após a instalação do Node você pode executar os comandos de instalação encontrado no Readme.MD normalmente.
+Para que você veja as funcionalidades desse boilerplate leia o arquivo Readme.md para fazer as instalações necessárias para levantar este aplicativo, que já vem com uns exemplos legais de navegação em um acervo de livros e chat de mensagens também. A única coisa que você deve instalar antes é o Node.Js que pode ser obtido pelo site [http://nodejs.org/]. Após a instalação do Node você pode executar os comandos de instalação encontrado no Readme.MD normalmente.
 
 O artigo ficou bem extenso mas tentei cobrir o máximo que pude para que vocês possam começar a caminhar com o Git, pois o que foi apresentado não é nem 1% da capacidade da ferramenta! Lembre-se que ainda podemos navegar em versões antigas, mudar de branch, execução de tarefas de deploy após um push no servidor (conhecido como hooks) etc.
 
