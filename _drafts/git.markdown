@@ -37,6 +37,7 @@ Repositório nada mais é do que uma pasta que irá servir de armazenamento de t
 Com o comando acima será criada uma pasta vazia, com o nome de FestasJaApp, dentro do local que você digitou esse comando.
 
 Certo, agora vamos criar uma página inicial de teste, chamada index.html e inserimos o seguinte conteúdo dentro:
+{% highlight bash %}
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -47,19 +48,26 @@ Certo, agora vamos criar uma página inicial de teste, chamada index.html e inse
 <p>Conteúdo inicial</p>
 </body>
 </html>
+{% endhighlight %}
 
 Agora salve o arquivo. 
 
 Dentro da mesma pasta do projeto insira o seguinte comando:
+
+{% highlight bash %}
 $ git status
+{% endhighlight %}
 
 Com o comando acima conseguimos verificar como está o status atual do nosso repositório. E no status atual temos um repositório vazio (que iniciamos através do comando git init) e um arquivo que ainda não está no repositório chamado index.html.
 Como index.html é um arquivo do nosso projeto, queremos que ele seja adicionado no nosso repositório, para isso basta adicionar através do comando abaixo:
 
+{% highlight bash %}
 $ git add index.html
+{% endhighlight %}
 
 Se verificarmos o status mais uma vez, veremos que agora nosso arquivo está adicionado ao repositório:
 
+{% highlight bash %}
 $git status 
 On branch master
 
@@ -69,18 +77,25 @@ Changes to be commited:
   (use "git rm --cached <file>..." to unstage)
 
         new file:    index.html
+{% endhighlight %}
 
 Bom então agora que nosso repositório já está pronto, com a primeira página, vamos commitar nossa versão zero. Commitar é um termo dado para versionar todo o código que se tem no momento atual. Então como nós criamos nossa página esqueleto, vamos fazer um commit inicial para registrar nosso esqueleto na linha do tempo (no futuro permite voltarmos para versão esqueleto ou começar novos projetos baseados na versão zero, em cima desse esqueleto). Para isso digite o comando abaixo:
 
+{% highlight bash %}
 $ git commit -am “initial commit, skeleton”
+{% endhighlight %}
 
 Repare que o que está entre aspas é o comentário das alterações feitas, você pode colocar o que quiser (por boas práticas colocar o comentário no verbo presente). Após esse comando ao verificarmos o status mais uma vez recebemos a seguinte mensagem:
+
+{% highlight bash %}
 $ git status
 On branch master
 nothing to commit, working directory clean
+{% endhighlight %}
 
 Essa mensagem identifica que tudo que está no repositório está fiel à última versão commitada. Se alterarmos o parágrafo <p>Conteúdo inicial</p> para <p>Conteúdo inicial 2</p> e salvarmos o arquivo, ao verificar o status mais uma vez receberemos a seguinte mensagem:
 
+{% highlight bash %}
 $ git status
 On branch master
 Changes not staged for commit:
@@ -90,23 +105,31 @@ Changes not staged for commit:
 	modified:   index.html
 
 no changes added to commit (use "git add" and/or "git commit -a")
+{% endhighlight %}
 
 Então commitando mais uma vez para versionarmos essa pequena alteração:
 
+{% highlight bash %}
 $ git commit -am "alterar texto de conteúdo"
 [master e9f7b0e] alterar texto de conteúdo
  1 file changed, 1 insertion(+), 1 deletion(-)
+{% endhighlight %}
 
 Verificando o status novamente:
+
+{% highlight bash %}
 $ git status
 On branch master
 nothing to commit, working directory clean
+{% endhighlight %}
 
 Ou seja, analisando todo fluxo até agora, ao criarmos um arquivo e adicionarmos ao repositório, ou alterarmos um arquivo já adicionado, o git identifica que o arquivo é novo/modificado no repositório e as alterações ainda não foram commitadas.  Então após terminarmos todas as alterações, realizamos o commit da versão atual através do comando git commit. 
 
 Portanto um fluxo bastante comum é commitar as alterações feitas para cada funcionalidade/etapa do desenvolvimento do projeto. Se uma etapa levar mais de um dia de codificação é comum commitarmos o que foi feito no final do dia de trabalho. E para os mais precavidos, realizar o commit de todo trabalho feito até os momentos de pausa (almoço, cafés etc.). 
 
 Vamos mudar o título e inserir uma imagem no repositório, segue nosso novo arquivo:
+
+{% highlight html %}
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -118,11 +141,13 @@ Vamos mudar o título e inserir uma imagem no repositório, segue nosso novo arq
 <p>Faça já sua festa!</p>
 </body>
 </html>
+{% endhighlight %}
 
 Certo, agora imagine que temos um arquivo pessoal chamado anotacoes-gerais.txt que queremos inserir nessa pasta, mas que não precise ser adicionado ao repositorio, pois ele tem tarefas pertinentes a você que não concerne ao projeto, algumas senhas suas etc. Se colocar esse arquivo na pasta do repositorio e não fizermos nada, OK. O arquivo não será adicionado ao repositório, mas raramente adicionamos arquivos um a um no repositorio como fizemos no início adicionando o arquivo index.html. Geralmente utilizamos o comando git add . e o ponto representa adicionar todos os arquivos dentro do local que você está. Mas se fizermos isso agora o arquivo anotacoes-gerais.txt também será inserido e nós não queremos isso. 
 
 Bem, vamos verificar como está o repositório até agora:
 
+{% highlight bash %}
 $ git status
 On branch master
 Changes not staged for commit:
@@ -138,12 +163,16 @@ Untracked files:
 	logo.png
 
 no changes added to commit (use "git add" and/or "git commit -a")
+{% endhighlight %}
 
 Para evitar que o git adicione o arquivo vamos criar um arquivo chamado .gitignore com o seguinte conteúdo:
 
+{% highlight bash %}
 anotacoes-gerais.txt
+{% endhighlight %}
 
 Salve o arquivo e verifique o status mais uma vez:
+{% highlight bash %}
 $ git status
 On branch master
 Changes not staged for commit:
@@ -159,10 +188,12 @@ Untracked files:
 	logo.png
 
 no changes added to commit (use "git add" and/or "git commit -a")
+{% endhighlight %}
 
 Repare que o arquivo .gitignore é reconhecido pelo repositório mas o arquivo anotacoes-gerais.txt não é nem mais verificado pelo git. E era isso que nós queriamos, não tem problema de ter o arquivo .gitignore adicionado ao projeto, ele é muito útil e veremos isso posteriormente. 
 Bem, vamos adicionar os arquivos e commitar para termos nossa primeira versão apresentável:
 
+{% highlight bash %}
 $ git add .
 $ git commit -am "página inicial pronta"
 [master 3b2bf07] página inicial pronta
@@ -172,22 +203,28 @@ $ git commit -am "página inicial pronta"
 $ git status
 On branch master
 nothing to commit, working directory clean
+{% endhighlight %}
 
 Eu utilizo o IntellijIDEA WebStorm como minha IDE de desenvolvimento, gosto muito dos produtos do JetBrains, substitui o Eclipse por ele e estou muito feliz! Quando eu mando abrir meus projetos, ele já cria uns arquivos ocultos de sistemas dentro da pasta .idea, então como não quero isso no meu repositório já vou adicionar mais uma linha no meu arquivo .gitignore:
 
+{% highlight bash %}
 anotacoes-gerais.txt
 .idea
+{% endhighlight %}
 
 Agora vou brincar um pouco com o WebStorm para mostrar pra vocês o poder do versionamento. (Tudo isso pode ser feito pela linha de comando do git, Eclipse, ou plugins para sublime text, e até mesmo para o editor que você já está acostumado).
 
 Adicione mais duas linhas no arquivo index.html antes da tag <body>:
 
+{% highlight html %}
 <p>Segue mais um novo parágrafo adicionado no webstorm</p>
 <p><a href=“new.html”>Nova página</a></p>
+{% endhighlight %}
 
 Crie um arquivo Teste.html vazio que não irei adicionar ao repositório.
 
 Crie um arquivo new.html com o seguinte conteúdo:
+{% highlight html %}
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -199,9 +236,13 @@ Crie um arquivo new.html com o seguinte conteúdo:
 <p><a href="index.html">Início</a></p>
 </body>
 </html>
+{% endhighlight %}
 
 Adicione esse arquivo com o comando:
+
+{% highlight bash %}
 $ git add new.html
+{% endhighlight %}
 
 Repare que no sidebar do WebStorm, já me mostra em azul os arquivos modificados, em verde os arquivos novos, cinza os arquivos ignorados pelo .gitignore e vermelho os arquivos que ainda não foram adicionados ao repositório:
 
@@ -225,6 +266,7 @@ Particularmente eu prefiro trabalhar com um IDE justamente por essas facilidades
 
 Perfeito, já montamos nosso repositório inicial e já tivemos 4 versionamentos:
 
+{% highlight bash %}
 $ git log
 commit f0706d9f08ff16a42eb90751a136b21a0ae9d364
 Author: Leonardo Ribeiro <leonardolr@globo.com>
@@ -249,6 +291,7 @@ Author: Leonardo Ribeiro <leonardolr@globo.com>
 Date:   Sun Nov 9 13:14:25 2014 -0200
 
     initial commit, skeleton
+{% endhighlight %}
 
 Agora que tal enviarmos nosso repositório para um “servidor” e ter a possibilidade de outros companheiros de projeto atuarem nesse trabalho? Essa é uma das principais vantagens do Git. O Git trata cada repositório como um servidor! Isso te permite ter diversos backups do seu projetos em diversos locais. 
 
@@ -261,10 +304,13 @@ Após criar a conta, no próprio site do GitHub, tem os passos iniciais para cri
 
 
 2 - Na pasta do nosso já criado repositório entre com os comandos abaixo:
+{% highlight bash %}
 $ git remote add origin https://github.com/SEU-USUARIO/FestasJaApp.git
 $ git push -u origin master
+{% endhighlight %}
 
 3 - Se você fez tudo certo, ao digitar o segundo comando, irá receber uma solicitação para digitar seu nome de usuario e senha e seus arquivos serão enviados:
+{% highlight bash %}
 Counting objects: 17, done.
 Delta compression using up to 8 threads.
 Compressing objects: 100% (13/13), done.
@@ -273,13 +319,16 @@ Total 17 (delta 3), reused 0 (delta 0)
 To https://github.com/leonardolr/FestasJaApp.git
  * [new branch]      master -> master
 Branch master set up to track remote branch master from origin.
+{% endhighlight %}
 
 Ao realizar um refresh do repositório na página, conseguimos verificar os arquivos no repositório do github:
 
 
 Com isso seu repositório já está publicado no GitHub, você pode divulgar para seus companheiros de projeto para que eles possam “clonar” o repositório. Clonar nada mais é que fazer o download do repositório através do comando git clone. Vocês já podem fazer o clone do nosso primeiro repositório pelo comando abaixo:
 
+{% highlight bash %}
 $ git clone https://github.com/leonardolr/FestasJaApp.git
+{% endhighlight %}
 
 Repare que o GitHub é um serviço aberto para o público, qualquer um pode clonar seus códigos, abrir Issues (problemas a serem corrigidos), comentar, favoritar (starring) etc.! Isso é o melhor dos mundos para os desenvolvedores de projetos opensources! Se isso não é o que você deseja você pode pagar na sua conta do GitHub para ter seu repositório privado ou então recorrer ao BitBucket que te dá a opção de ter o repositório privado sem custo algum!
 
